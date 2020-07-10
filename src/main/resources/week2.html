@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html, body {
+            background-color: #FEF5F4;
+        }
+
+        .list-unstyled {
+            background-color: #FFFFFF;
+            border-radius: 25px;
+        }
+
+        li img {
+            border-radius: 50%;
+        }
+
+
+    </style>
+
+    <title>Collections</title>
+</head>
+<body>
+
+
+<!--NAV BAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#"><img src="photos/navLogo.png" width="60rem" style="border-radius: 50%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bootcamp.html">Bootcamp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="staff.html">Staff</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="week1.html">Core: Loops</a>
+                    <a class="dropdown-item" href="week2.html">Core: Collections</a>
+                    <hr>
+                    <a class="dropdown-item" href="week3.html">OOP: Getters & Setters</a>
+                    <a class="dropdown-item" href="week4.html">OOP: Classes & Inheritance</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--HERO IMAGE-->
+<div class="container-fluid">
+    <div class="col">
+        <img src="photos/lesson2.png" width="100%">
+    </div>
+</div>
+
+
+
+<!--FEED OF POSTS / LESSON PLAN-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" style="background-color: white; border-radius: 20px"><!-- insert lesson content -->
+
+            <h2>Lists</h2>
+            <p><em>Published: June 22, 2020</em></p>
+            <hr>
+                <p>In programming, we often encounter situations where we want to handle many values. The only method we've used so far has been to define a separate variable for storing each value. This is impractical.</p>
+
+                <pre>
+            String word1;
+            String word2;
+            String word3;
+
+            String word10;
+                </pre>
+                <p>The solution presented above is useless in effect — consider a situation in which there are thousands of words to store.</p>
+
+                <p>Programming languages offer tools to assist in storing a large quantity of values. We will next take a peek at perhaps the single most used tool in Java, the ArrayList, which is used for storing many values that are of the same type.</p>
+
+                <p>ArrayList is a pre-made tool in Java that helps dealing with lists. It offers various methods, including ones for adding values to the list, removing values from it, and also for the retrieval of a value from a specific place in the list. The concrete implementations — i.e., how the list is actually programmed — has beed abstracted behind the methods, so that a programmer making use of a list doesn't need to concern themselves with its inner workings.</p>
+
+                <h2>Using and Creating Lists</h2>
+
+                <p>For an ArrayList to be used, it first needs be imported into the program. This is achieved by including the command import java.util.ArrayList; at the top of the program. Below is an example program where an ArrayList is imported into the program.</p>
+
+                <pre>
+            import java.util.ArrayList;
+
+            public class Program {
+
+            public static void main(String[] args) {
+
+            }
+            }
+                </pre>
+
+                <p>Creating a new list is done with the command ArrayList<Type> list = new ArrayList<>(), where Type is the type of the values to be stored in the list (e.g. String). We create a list for storing strings in the example below.</p>
+
+            <pre>
+            import java.util.ArrayList;
+            public class Program {
+            public static void main(String[] args) {
+            ArrayList<String> list = new ArrayList<>();
+
+
+                }
+                }
+            </pre>
+
+                <p>The type of the ArrayList variable is ArrayList. When a list variable is initialized, the type of the values to be stored is also defined in addition to the variable type — all the variables stored in a given list are of the same type. As such, the type of an ArrayList that stores strings is ArrayList<String>. A new list is created with the command new ArrayList<>();.</p>
+
+            <a href="https://java-programming.mooc.fi/part-3/2-lists"><p>Source: MoocFi Java</p></a>
+
+        </div> <!-- content column -->
+
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html, body {
+            background-color: #FEF5F4;
+        }
+
+        .list-unstyled {
+            background-color: #FFFFFF;
+            border-radius: 25px;
+        }
+
+        li img {
+            border-radius: 50%;
+        }
+
+
+    </style>
+
+    <title>Loops</title>
+</head>
+<body>
+
+
+<!--NAV BAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#"><img src="photos/navLogo.png" width="60rem" style="border-radius: 50%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bootcamp.html">Bootcamp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="staff.html">Staff</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="week1.html">Core: Loops</a>
+                    <a class="dropdown-item" href="week2.html">Core: Collections</a>
+                    <hr>
+                    <a class="dropdown-item" href="week3.html">OOP: Getters & Setters</a>
+                    <a class="dropdown-item" href="week4.html">OOP: Classes & Inheritance</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--HERO IMAGE-->
+<div class="container-fluid">
+    <div class="col">
+        <img src="photos/lesson1.png" width="100%">
+    </div>
+</div>
+
+
+
+<!--FEED OF POSTS / LESSON PLAN-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" style="background-color: white; border-radius: 20px">
+            <h2>Loops and Infinite Loops</h2>
+            <p><em>Published: June 15, 2020</em></p>
+            <hr>
+            <p class="text-justify">A loop consists of an expression that determines whether or not the code within the loop should be repeated, along with a block containing the source code to be repeated. A loop takes the following form.</p>
+            <pre>
+while (_expression_) {
+// The content of the block wrapped in curly brackets
+// The block can have an unlimited amount of content
+}
+</pre>
+            We'll use the value true as the loop's expression for now. This way, the loop's execution is always continued when the program arrives at the point that decides whether it should be repeated or not. This happens when the execution of the program first arrives at the loop expression for the first time, and also when it reaches the end of the loop's block.
+
+            <p>The loop execution proceeds line-by-line. The following program outputs I can program an infinite number of times.</p>
+
+            <pre>
+while (true) {
+System.out.println("I can program!");
+}
+A program that runs infinitely does not end on its own. In NetBeans, it can be shut down by clicking the red button located on the left side of the output window.
+    </pre>
+
+            <h2>Ending a Loop</h2>
+            <p>The loop can be broken out of with command 'break'. When a computer executes the command 'break', the program execution moves onto the next command following the loop block.</p>
+
+            <p>The example below is a program that prints numbers from one to five. Note how the variable that's used within the loop is defined before the loop. This way the variable can be incremented inside the loop and the change sticks between multiple iterations of the loop.</p>
+            <pre>
+int number = 1;
+
+while (true) {
+System.out.println(number);
+if (number >= 5) {
+break;
+}
+
+number = number + 1;
+}
+
+System.out.println("Ready!");
+Sample output
+1
+2
+3
+4
+5
+Ready!
+</pre>
+
+<p>Breaking out of the loop occurs when a user enters a specified input or whenever a calculation performed in the loop ends in the desired result. These kinds of programs contain both a loop used to define a section to be repeated and also a conditional expression used to check whether or not the condition to exit the loop has been fulfilled.</p>
+
+<p>Users can also be asked for input within a loop. The variables that are commonly used in loops (such as Scanner readers) are defined before the loop, whereas variables (such as the value read from the user) that are specific to the loop are defined within it.</p>
+
+<p>In the example below, the program asks the user whether to exit the loop or not. If the user inputs the string "y", the execution of the program moves to the command following the loop block, after which the execution of the program ends.</p>
+<pre>
+Scanner scanner = new Scanner(System.in);
+
+while (true) {
+System.out.println("Exit? (y exits)");
+String input = scanner.nextLine();
+if (input.equals("y")) {
+break;
+}
+
+System.out.println("Ok! Let's carry on!");
+}
+
+System.out.println("Ready!");
+The program in the example works as follows. The user's inputs are marked in red.
+
+Sample output
+Exit? (y exits)
+no
+Ok! Let's carry on!
+Exit? (y exits)
+non
+Ok! Let's carry on!
+Exit? (y exits)
+y
+Ready!
+</pre>
+            <a href="https://java-programming.mooc.fi/part-2/2-repeating"><p>Source: MoocFi Java </p></a>
+
+        </div> <!-- content column -->
+
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

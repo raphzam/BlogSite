@@ -1,0 +1,12 @@
+html, body {
+    background-color: #FEF5F4;
+}
+
+.list-unstyled {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+}
+
+li img {
+    border-radius: 50%;
+}

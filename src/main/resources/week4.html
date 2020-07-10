@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html, body {
+            background-color: #FEF5F4;
+        }
+
+        .list-unstyled {
+            background-color: #FFFFFF;
+            border-radius: 25px;
+        }
+
+        li img {
+            border-radius: 50%;
+        }
+
+
+    </style>
+
+    <title>Classes & Inheritance</title>
+</head>
+<body>
+
+
+<!--NAV BAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#"><img src="photos/navLogo.png" width="60rem" style="border-radius: 50%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bootcamp.html">Bootcamp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="staff.html">Staff</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="week1.html">Core: Loops</a>
+                    <a class="dropdown-item" href="week2.html">Core: Collections</a>
+                    <hr>
+                    <a class="dropdown-item" href="week3.html">OOP: Getters & Setters</a>
+                    <a class="dropdown-item" href="week4.html">OOP: Classes & Inheritance</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--HERO IMAGE-->
+<div class="container-fluid">
+    <div class="col">
+        <img src="photos/lesson4.png" width="100%">
+    </div>
+</div>
+
+
+
+<!--FEED OF POSTS / LESSON PLAN-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" style="background-color: white; border-radius: 20px"><!-- insert lesson content -->
+
+
+            <h1>Java Inheritance (Subclass and Superclass)</h1>
+            <h2>Java Inheritance</h2>
+            <p><em>Published: July 6, 2020</em></p>
+
+            <hr>
+
+            <p>In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:</p>
+
+                <strong>subclass (child)</strong> - the class that inherits from another class
+                <strong>superclass (parent)</strong> - the class being inherited from
+
+            <p>To inherit from a class, use the extends keyword.</p>
+
+            <p>In the example below, the Car class (subclass) inherits the attributes and methods from the Vehicle class (superclass):</p>
+
+            <h3>Example</h3>
+
+            <pre>
+            class Vehicle {
+            protected String brand = "Ford";
+            public void honk() {
+            System.out.println("Tuut, tuut!");
+            }
+            }
+
+            class Car extends Vehicle {
+            private String modelName = "Mustang";
+            public static void main(String[] args) {
+
+
+            Car myCar = new Car();
+
+
+            myCar.honk();
+
+
+            System.out.println(myCar.brand + " " + myCar.modelName);
+            }
+            }
+            </pre>
+
+
+            <p>Did you notice the protected modifier in Vehicle?</p>
+
+            <p>We set the brand attribute in Vehicle to a protected access modifier. If it was set to private, the Car class would not be able to access it.</p>
+
+            <h4>Why And When To Use "Inheritance"?</h4>
+
+            <p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
+
+            <p>Tip: Also take a look at the next chapter, Polymorphism, which uses inherited methods to perform different tasks.</p>
+
+            <h3>The final Keyword</h3>
+
+            <p>If you don't want other classes to inherit from a class, use the final keyword:</p>
+
+            <p>If you try to access a final class, Java will generate an error:</p>
+
+            <pre>
+
+            final class Vehicle {
+            ...
+            }
+
+            class Car extends Vehicle {
+            ...
+            }
+            The output will be something like this:
+
+            Car.java:8: error: cannot inherit from final Vehicle
+            class Car extends Vehicle {
+            ^
+            1 error)
+
+            </pre>
+
+            <p><a href="https://www.w3schools.com/java/java_inheritance.asp">Source: W3 Schools </a></p>
+
+
+        </div> <!-- content column -->
+
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

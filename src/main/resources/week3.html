@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html, body {
+            background-color: #FEF5F4;
+        }
+
+        .list-unstyled {
+            background-color: #FFFFFF;
+            border-radius: 25px;
+        }
+
+        li img {
+            border-radius: 50%;
+        }
+
+
+    </style>
+
+    <title>Getters & Setters</title>
+</head>
+<body>
+
+
+<!--NAV BAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="#"><img src="photos/navLogo.png" width="60rem" style="border-radius: 50%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bootcamp.html">Bootcamp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="staff.html">Staff</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Lessons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="week1.html">Core: Loops</a>
+                    <a class="dropdown-item" href="week2.html">Core: Collections</a>
+                    <hr>
+                    <a class="dropdown-item" href="week3.html">OOP: Getters & Setters</a>
+                    <a class="dropdown-item" href="week4.html">OOP: Classes & Inheritance</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--HERO IMAGE-->
+<div class="container-fluid">
+    <div class="col">
+        <img src="photos/lesson3.png" width="100%">
+    </div>
+</div>
+
+
+
+<!--FEED OF POSTS / LESSON PLAN-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10" style="background-color: white; border-radius: 20px"><!-- insert lesson content -->
+            <h1>Java Encapsulation</h1>
+
+            <h2>Encapsulation</h2>
+            <p><em>Published: June 29, 2020</em></p>
+            <hr>
+
+                <p>The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:</p>
+
+<ul>
+
+    <li>declare class variables/attributes as private</li>
+    <li>provide public get and set methods to access and update the value of a private variable</li>
+    <li>Get and Set</li>
+</ul>
+
+                <p>You learned from the previous chapter that private variables can only be accessed within the same class (an outside class has no access to it). However, it is possible to access them if we provide public get and set methods.</p>
+
+                <p>The get method returns the variable value, and the set method sets the value.</p>
+
+                <p>Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case:</p>
+
+                <h4>Example</h4>
+            <pre>
+            public class Person {
+            private String name;
+
+
+            public String getName() {
+            return name;
+            }
+
+
+            public void setName(String newName) {
+            this.name = newName;
+            }
+            }
+            </pre>
+
+                <h4>Example explained</h4>
+
+                <p>The get method returns the value of the variable name.</p>
+
+                <p>The set method takes a parameter (newName) and assigns it to the name variable. The this keyword is
+                    used to refer to the current object.</p>
+
+                <p>However, as the name variable is declared as private, we cannot access it from outside this
+                    class:</p>
+
+                <h4>Example</h4>
+
+                <pre>public class MyClass {
+                    public static void main(String[] args) {
+                    Person myObj = new Person();
+                    myObj.name = "John";
+                    System.out.println(myObj.name);
+                    }
+                    }
+                </pre>
+
+                <p>If the variable was declared as public, we would expect the following output:</p>
+
+                <p>However, as we try to access a private variable, we get an error:</p>
+
+                <pre>MyClass.java:4: error: name has private access in Person
+                    myObj.name = "John";
+                    ^
+                    MyClass.java:5: error: name has private access in Person
+                    System.out.println(myObj.name);
+                    ^
+                    2 errors</pre>
+
+                <p>Instead, we use the getName() and setName() methods to acccess and update the variable:</p>
+
+                <h3>Example</h3>
+
+                <pre>public class MyClass {
+                    public static void main(String[] args) {
+                    Person myObj = new Person();
+                    myObj.setName("John");
+                    System.out.println(myObj.getName());
+                    }
+                    }</pre>
+
+
+            Run example »
+
+                <h3>Why Encapsulation?</h3>
+
+                <ul>
+                    <li>Better control of class attributes and methods</li>
+                    <li>Class attributes can be made read-only (if you only use the get method), or write-only (if you only
+                    use the set method)
+                    </li>
+                    <li>Flexible: the programmer can change one part of the code without affecting other parts</li>
+                    <li>Increased security of data</li>
+                </ul>
+            <a href="https://www.w3schools.com/java/java_encapsulation.asp"><p>Source: W3 Schools</p></a>
+
+        </div> <!--END content column -->
+
+
+        <div class="col-lg-1"></div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
