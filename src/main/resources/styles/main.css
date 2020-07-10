@@ -1,6 +1,10 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     background-color: #FEF5F4;
 }
@@ -16,6 +20,14 @@ nav {
     text-transform: uppercase;
 }
 
+.about{
+    font-family: Georgia;
+}
+
+.staff{
+    font-family: "Helvetica Neue";
+}
+
 .lessons {
     font-family: "Palatino";
 }
@@ -23,6 +35,10 @@ nav {
 .list-unstyled {
     background-color: #FFFFFF;
     border-radius: 25px;
+}
+
+.jumbotron .container{
+    text-align: center;
 }
 
 .fa {
