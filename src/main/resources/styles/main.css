@@ -1,5 +1,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -17,6 +19,15 @@ li img {
 nav {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
+    text-transform: uppercase;
+}
+
+.btn {
+   margin-left: 43%;
+}
+
+.authors{
+    font-family: 'Barlow Condensed', sans-serif;
     text-transform: uppercase;
 }
 
